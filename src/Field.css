@@ -1,0 +1,13 @@
+.Field__label {
+  text-align: left;
+  clear: both;
+  float:left;
+}
+
+.Field__input {
+  box-sizing: border-box;
+  font-size: 1em;
+  padding: 5px 0;
+  margin-top: 5px;
+  width: 100%;
+}

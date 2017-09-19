@@ -1,0 +1,24 @@
+.Form__container {
+  border: 2px solid #276eab;
+  display: grid;
+  grid-gap: 15px;
+  margin: auto;
+  max-width: 480px;
+  padding: 20px;
+}
+
+.Form__submit_button {
+  background-color: #fff;
+  border: 2px solid #276eab;
+  border-radius: 5px;
+  color: #276eab;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 10px 0;
+}
+
+.Form__submit_button:hover {
+  background-color:#276eab;
+  border: 2px solid #fff;
+  color: #fff;
+}

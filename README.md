@@ -20,7 +20,10 @@ As a user, I can see a modal appearing on the screen.
 
 As a user, I can see an iframe within the modal.
 
-The Submit button will serialize the forms fields, and store them in a JSON object in the state of the app.
+The Submit button will serialize the form's fields, and store them in a JSON object in the state of the app.
+
+![Business Form mobile](public/img/form-mobile.png)
+![Business Form desktop](public/img/form-desktop.png)
 
 The Submit button will launch a modal window.
 
@@ -29,6 +32,9 @@ The iframe will be a URL generated that passes the string version of the JSON to
 The modal window should have two buttons:
 - Close - Closes the modal window to allow the user to edit their business fields again.
 - Export - Will console.log the raw JSON object (not the "stringified" version).
+
+![Modal and iframe mobile](public/img/modal-mobile.png)
+![Modal and iframe desktop](public/img/modal-desktop.png)
 
 ## Technologies used
 
@@ -63,3 +69,4 @@ Run the tests:
 ```
 $ npm run test
 ```
+![Unit tests](public/img/unit-tests.png)

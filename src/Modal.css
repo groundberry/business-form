@@ -1,0 +1,63 @@
+.Modal__backdrop {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 35px;
+  right: 30px;
+  left: 30px;
+  bottom: 35px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Modal__body {
+  flex: 9;
+}
+
+.Modal__footer {
+  flex: 1;
+  background-color: #276eab;
+  padding-top: 20px;
+}
+
+.Modal__close_button,
+.Modal__export_button {
+  background-color: #fff;
+  border: 2px solid #276eab;
+  border-radius: 5px;
+  color: #276eab;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 10px;
+  padding: 10px 0;
+  width: 30%;
+  display: inline-block;
+
+}
+
+.Modal__close_button:hover,
+.Modal__export_button:hover {
+  background-color:#276eab;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .Modal__backdrop {
+    right: 100px;
+    left: 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .Modal__backdrop {
+    right: 200px;
+    left: 200px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .Modal__backdrop {
+    right: 250px;
+    left: 250px;
+  }
+}

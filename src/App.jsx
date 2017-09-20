@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Form from './Form';
+import Modal from './Modal';
 import './App.css';
 
 class App extends Component {
@@ -15,10 +16,13 @@ class App extends Component {
         country: '',
         phone_number: '',
       },
+      isModalVisible: false,
     };
 
     this.handleChangeBusinessData = this.handleChangeBusinessData.bind(this);
     this.handleSubmitBusinessData = this.handleSubmitBusinessData.bind(this);
+    this.handleExportBusinessData = this.handleExportBusinessData.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
   }
 
   handleChangeBusinessData(label, value) {
@@ -31,7 +35,17 @@ class App extends Component {
   }
 
   handleSubmitBusinessData() {
-    // TODO
+    this.toggleModal();
+  }
+
+  handleExportBusinessData() {
+    console.log(this.state.business);
+  }
+
+  toggleModal() {
+    this.setState(prevState => ({
+      isModalVisible: !prevState.isModalVisible,
+    }));
   }
 
   render() {
@@ -41,11 +55,18 @@ class App extends Component {
           <h2>Business Form</h2>
         </div>
         <div className="App__body">
-          <Form
-            business={this.state.business}
-            onChange={this.handleChangeBusinessData}
-            onSubmit={this.handleSubmitBusinessData}
-          />
+          {this.state.isModalVisible
+            ? <Modal
+              business={this.state.business}
+              onClose={this.toggleModal}
+              onExport={this.handleExportBusinessData}
+            />
+            : <Form
+              business={this.state.business}
+              onChange={this.handleChangeBusinessData}
+              onSubmit={this.handleSubmitBusinessData}
+            />
+          }
         </div>
       </div>
     );

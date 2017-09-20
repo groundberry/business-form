@@ -51,9 +51,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App__header">
-          <h2>Business Form</h2>
-        </div>
+        <h2 className="App__header">
+          Business Form
+        </h2>
         <div className="App__body">
           {this.state.isModalVisible
             ? <Modal

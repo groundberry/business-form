@@ -1,22 +1,10 @@
 .Frame {
   border: 0;
-  max-width: 400px;
-}
-
-@media (min-width: 768px) {
-  .Frame {
-    max-width: 500px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .Frame {
-    max-width: 600px;
-  }
-}
-
-@media (min-width: 1600px) {
-  .Frame {
-    max-width: 700px;
-  }
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  left: 10%;
+  bottom: 5%;
+  width: 80%;
+  height: 90%;
 }
